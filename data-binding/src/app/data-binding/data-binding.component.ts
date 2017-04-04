@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+import { InputPropertyComponent } from './input-property.component';
+
 @Component({
     selector: 'app-data-binding',
     templateUrl: './data-binding.component.html',
-    styleUrls: ['./data-binding.component.css'],
-    // styles: [
-    //     `
-    //         .highlight {
-    //             background-color: yellow;
-    //             font-weight: bold; 
-    //         }
-    //     `
-    // ]
+    /*styles: [
+         `
+             .highlight {
+                 background-color: yellow;
+                 font-weight: bold;
+             }
+         `
+    ],*/
+    styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit {
 
@@ -26,6 +28,17 @@ export class DataBindingComponent implements OnInit {
     conteudoSalvo: string = '';
 
     isMouseOver: boolean = false;
+
+    nome: string = 'Davidson Alencar';
+
+    pessoa: object = {
+        nome: 'Davidson',
+        idade: 31
+    };
+
+    nomeCurso: string = 'Curso: TypeScript 2';
+
+    valorInicial: number = 20;
 
     constructor() { }
 
@@ -52,6 +65,11 @@ export class DataBindingComponent implements OnInit {
 
     onMouseSpan() {
         this.isMouseOver = !this.isMouseOver;
+    }
+
+    onValorMudou(event) {
+        console.log(event);
+        alert(event.novoValor);
     }
 
     ngOnInit() {

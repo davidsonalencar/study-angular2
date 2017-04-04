@@ -5,11 +5,17 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { InputPropertyComponent } from './data-binding/input-property.component';
+import { OutputPropertyComponent } from './data-binding/output-property.component';
+import { CycleComponent } from './cycle/cycle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    InputPropertyComponent,
+    OutputPropertyComponent,
+    CycleComponent
   ],
   imports: [
     BrowserModule,
