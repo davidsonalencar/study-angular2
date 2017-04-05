@@ -16,46 +16,46 @@ export class CycleComponent implements OnInit, OnChanges, DoCheck, AfterContentI
     @ViewChild('variavelLocalP') variavelLocalP: HTMLElement;
 
     constructor() {
-        this.log('constructor');
+        CycleComponent.log('constructor');
     }
 
     ngOnInit() {
-        this.log('ngOnInit');
+        CycleComponent.log('ngOnInit');
         console.log(this.variavelLocalP); //se não usar o ViewChild não enxergará o elemento pela variável
     }
 
     ngOnChanges() {
-        this.log('ngOnChanges');
+        CycleComponent.log('ngOnChanges');
         console.log(this.variavelLocalP);
     }
 
     ngDoCheck() {
-        this.log('ngDoCheck');
+        CycleComponent.log('ngDoCheck');
     }
 
     ngAfterContentInit() {
-        this.log('ngAfterContentInit');
+        CycleComponent.log('ngAfterContentInit');
     }
 
     ngAfterContentChecked() {
-        this.log('ngAfterContentChecked');
+        CycleComponent.log('ngAfterContentChecked');
         console.log(this.variavelLocalP);
     }
 
     ngAfterViewInit() {
-        this.log('ngAfterViewInit');
+        CycleComponent.log('ngAfterViewInit');
     }
 
     ngAfterViewChecked() {
-        this.log('ngAfterViewChecked');
+        CycleComponent.log('ngAfterViewChecked');
         console.log(this.variavelLocalP);
     }
 
     ngOnDestroy() {
-        this.log('ngOnDestroy');
+        CycleComponent.log('ngOnDestroy');
     }
 
-    private log(hook: string) {
+    private static log(hook: string) {
         console.log(hook);
     }
 
