@@ -1,15 +1,6 @@
-import { 
-    Component,
-    OnInit,
-    OnChanges,
-    DoCheck,
-    AfterContentInit,
-    AfterContentChecked,
-    AfterViewInit,
-    AfterViewChecked,
-    OnDestroy,
-    Input,
-    ViewChild
+import {
+    Component, OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked,
+    OnDestroy, Input, ViewChild, DoCheck
 } from '@angular/core';
 
 @Component({
@@ -17,15 +8,14 @@ import {
     templateUrl: './cycle.component.html',
     styleUrls: ['./cycle.component.css']
 })
-export class CycleComponent implements OnInit, OnChanges, DoCheck,
-    AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked,
-    OnDestroy {
+export class CycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit,
+    AfterViewChecked, OnDestroy {
 
     @Input() valorInicial: number = 10;
 
     @ViewChild('variavelLocalP') variavelLocalP: HTMLElement;
-    
-    constructor() { 
+
+    constructor() {
         this.log('constructor');
     }
 
