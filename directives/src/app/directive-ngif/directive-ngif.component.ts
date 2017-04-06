@@ -7,10 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DirectiveNgifComponent implements OnInit {
 
+    courses: string[] = [];
+
+    showCourses: boolean = false;
+
     constructor() {
     }
 
     ngOnInit() {
+    }
+
+    onToogleCourse() {
+        this.showCourses = !this.showCourses;
     }
 
 }

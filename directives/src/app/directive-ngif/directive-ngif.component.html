@@ -1,3 +1,32 @@
-<p>
-  directive-ngif works!
-</p>
+<h5>*ngIf - {{courses.length}}</h5>
+<div *ngIf="courses.length > 0">
+    Lista de cursos aqui.
+</div>
+<div *ngIf="courses.length == 0">
+    Não existe cursos para serem listados.
+</div>
+<div *ngIf="showCourses">
+    Lista de cursos aqui.
+</div>
+<div *ngIf="!showCourses">
+    Não existe cursos para serem listados.
+</div>
+<button (click)="onToogleCourse()">Mostra/Esconde cursos</button>
+
+<h5>Hidden como alternativa</h5>
+<div [hidden]="showCourses">
+    Lista de cursos aqui.
+</div>
+<div [hidden]="!showCourses">
+    Não existe cursos para serem listados.
+</div>
+
+<h5>Removendo o * do ngIf</h5>
+
+<template [ngIf]="showCourses">
+    <div>Lista de cursos aqui.</div>
+</template>
+
+<div template="ngIf showCourses">
+    Lista de cursos aqui.
+</div>

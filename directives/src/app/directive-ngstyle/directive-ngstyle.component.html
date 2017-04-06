@@ -1,0 +1,25 @@
+<h5>Styles com propety binding (style binding)</h5>
+
+<button [style.backgroundColor]="active ? 'blue' : 'gray'"
+        [style.color]="active ? 'white' : 'black'"
+        [style.fontWeight]="active ? 'bold' : 'normal'"
+        [style.fontSize]="fontSize + 'px'"
+        (click)="onToogleActive()"
+>
+    Mudar atributo 'ativo'
+</button>
+
+<input type="number" [(ngModel)]="fontSize">
+
+<h5>Styles com diretiva ngStyle</h5>
+
+<button [ngStyle]="{
+            'backgroundColor': active ? 'blue' : 'gray',
+            'color': active ? 'white' : 'black',
+            'fontWeight': active ? 'bold' : 'normal',
+            'fontSize': fontSize + 'px'
+        }"
+        (click)="onToogleActive()"
+>
+    Mudar atributo 'ativo'
+</button>

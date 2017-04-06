@@ -1,0 +1,16 @@
+<h5>ngClass</h5>
+
+<div>
+    <i class="fa fa-4x"
+       [class.fa-star-o]="!myFavorite"
+       [class.fa-star]="myFavorite"
+       (click)="onClick()"
+    ></i>
+</div>
+
+<div>
+    <i class="fa fa-4x"
+       [ngClass]="{'fa-star-o': !myFavorite, 'fa-star': myFavorite}"
+       (click)="onClick()"
+    ></i>
+</div>

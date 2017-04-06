@@ -1,0 +1,29 @@
+<h5>*ngSwitch</h5>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#" [class.active]="aba=='home'" (click)="aba='home'">Home</a>
+        <a class="nav-item nav-link" href="#" [class.active]="aba=='mapa'" (click)="aba='mapa'">Mapa</a>
+        <a class="nav-item nav-link" href="#" [class.active]="aba=='lista'" (click)="aba='lista'">Lista</a>
+    </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+    <p *ngSwitchCase="'mapa'">mapa selecionado</p>
+    <p *ngSwitchCase="'lista'">lista selecionado</p>
+    <p *ngSwitchDefault="">home default</p>
+</div>
+
+<h5>Removendo o * do ngSwitch</h5>
+
+<div class="container" [ngSwitch]="aba">
+    <template [ngSwitchCase]="'mapa'">
+        <p>mapa selecionado</p>
+    </template>
+    <template [ngSwitchCase]="'lista'">
+        <p>lista selecionado</p>
+    </template>
+    <template [ngSwitchCase]="'home'" ngSwitchDefault>
+        <p>home default</p>
+    </template>
+</div>
