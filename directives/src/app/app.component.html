@@ -10,4 +10,21 @@
 
 <!--<app-directive-ngstyle></app-directive-ngstyle>-->
 
-<app-elvis-operator></app-elvis-operator>
+<!--<app-elvis-operator></app-elvis-operator>-->
+
+<app-directive-ngcontent>
+    Texto passando por ng-content
+    <app-elvis-operator></app-elvis-operator>
+</app-directive-ngcontent>
+
+<br>
+
+<app-directive-ngcontent>
+    <div class="title">Título por ng-content</div>
+    <div class="body">
+        Corpo por ng-content
+    </div>
+    <div class="body">
+        Pega todos os seletores iguais e coloca juntos
+    </div>
+</app-directive-ngcontent>
