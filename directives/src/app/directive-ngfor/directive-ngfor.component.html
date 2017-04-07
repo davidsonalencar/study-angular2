@@ -9,19 +9,19 @@
 <h5>Removendo o * do ngIf</h5>
 
 <ul>
-    <li template="ngFor let course of courses, let i = index">
+    <li ng-template="ngFor let course of courses, let i = index">
         {{ i+1 }} - {{ course }}
     </li>
 </ul>
 
 <ul>
-    <template ngFor [ngForOf]="courses" let-course let-i="index">
+    <ng-template ngFor [ngForOf]="courses" let-course let-i="index">
         <li>
             {{ i+1 }} - {{ course }}
         </li>
-    </template>
+    </ng-template>
 </ul>
 
-<!--<template [ngIf]="showCourses">-->
+<!--<ng-template [ngIf]="showCourses">-->
     <!--<div>Lista de cursos aqui.</div>-->
-<!--</template>-->
+<!--</ng-template>-->

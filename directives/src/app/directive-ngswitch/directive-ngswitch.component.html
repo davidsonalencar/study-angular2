@@ -17,13 +17,13 @@
 <h5>Removendo o * do ngSwitch</h5>
 
 <div class="container" [ngSwitch]="aba">
-    <template [ngSwitchCase]="'mapa'">
+    <ng-template [ngSwitchCase]="'mapa'">
         <p>mapa selecionado</p>
-    </template>
-    <template [ngSwitchCase]="'lista'">
+    </ng-template>
+    <ng-template [ngSwitchCase]="'lista'">
         <p>lista selecionado</p>
-    </template>
-    <template [ngSwitchCase]="'home'" ngSwitchDefault>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'home'" ngSwitchDefault>
         <p>home default</p>
-    </template>
+    </ng-template>
 </div>

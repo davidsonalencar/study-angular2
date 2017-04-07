@@ -23,10 +23,10 @@
 
 <h5>Removendo o * do ngIf</h5>
 
-<template [ngIf]="showCourses">
+<ng-template [ngIf]="showCourses">
     <div>Lista de cursos aqui.</div>
-</template>
+</ng-template>
 
-<div template="ngIf showCourses">
+<div ng-template="ngIf showCourses">
     Lista de cursos aqui.
 </div>
