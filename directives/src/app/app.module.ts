@@ -15,6 +15,7 @@ import { BgYellowDirective } from './custom-directive/bg-yellow.directive';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 import { HighlightMouseDirective } from './custom-directive/highlight-mouse.directive';
 import { HighlightDirective } from './custom-directive/highlight.directive';
+import { MyElseDirective } from './custom-directive/my-else.directive';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { HighlightDirective } from './custom-directive/highlight.directive';
         BgYellowDirective,
         CustomDirectiveComponent,
         HighlightMouseDirective,
-        HighlightDirective
+        HighlightDirective,
+        MyElseDirective
     ],
     imports: [
         BrowserModule,

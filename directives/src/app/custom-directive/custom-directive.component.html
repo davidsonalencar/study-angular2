@@ -18,3 +18,24 @@
 <p [highlight]="'red'" [defaultColor]="'grey'">
     Texto com highlight.
 </p>
+
+<br>
+
+<div *ngIf="showCourses">
+    Lista de cursos aqui.
+</div>
+<div *myElse="showCourses">
+    Não existe cursos para serem listados.
+</div>
+<button (click)="onToogleCourse()">Mostra/Esconde cursos</button>
+<br>
+<ng-template [ngIf]="showCourses">
+    <div>
+        Lista de cursos aqui.
+    </div>
+</ng-template>
+<ng-template [myElse]="showCourses">
+    <div>
+        Não existe cursos para serem listados.
+    </div>
+</ng-template>

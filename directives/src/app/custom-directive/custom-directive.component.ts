@@ -8,10 +8,16 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CustomDirectiveComponent implements OnInit {
 
+    showCourses: boolean = false;
+
     constructor() {
     }
 
     ngOnInit() {
+    }
+
+    onToogleCourse() {
+        this.showCourses = !this.showCourses;
     }
 
 }

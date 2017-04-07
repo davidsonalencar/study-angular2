@@ -5,6 +5,8 @@ import {Directive, HostBinding, HostListener, Input, OnInit} from '@angular/core
 })
 export class HighlightDirective implements OnInit {
 
+    // Example custom attribute directive (behavior directive)
+
     @Input('highlight') highlight: string = 'yellow';
 
     @Input() defaultColor: string = 'white';
