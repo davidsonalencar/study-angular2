@@ -1,2 +1,10 @@
 <input type="text" #name>
 <button (click)="onAddCourse(name.value)">Add</button>
+
+<ul>
+    <li *ngFor="let course of courses">
+        {{ course }}
+    </li>
+</ul>
+
+<last-course></last-course>

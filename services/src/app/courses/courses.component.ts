@@ -5,7 +5,7 @@ import {CourseService} from './course.service';
     selector: 'courses',
     templateUrl: './courses.component.html',
     styleUrls: ['./courses.component.css'],
-    //providers: [CourseService]
+    providers: [CourseService]
 })
 export class CoursesComponent implements OnInit {
 
@@ -20,6 +20,14 @@ export class CoursesComponent implements OnInit {
 
     ngOnInit() {
         this.courses = this.courseService.getCourses();
+
+        CourseService.staticEmitterCreatedCourse.subscribe(
+            (name) => {
+                this.courses.push(name);
+                console.log('CourseService -> static -> emitter');
+            }
+        );
+
     }
 
 }

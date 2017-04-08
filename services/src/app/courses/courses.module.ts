@@ -3,7 +3,6 @@ import {CourseService} from '../courses/course.service';
 import {CommonModule} from '@angular/common';
 import {CoursesComponent} from './courses.component';
 
-
 @NgModule({
     declarations: [
         CoursesComponent
