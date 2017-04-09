@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {CourseService} from './courses/course.service';
 import {CoursesCreateModule} from './courses-create/courses-create.module';
 import {CoursesModule} from './courses/courses.module';
+import {LogService} from './logger/log.service';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import {CoursesModule} from './courses/courses.module';
         CoursesCreateModule,
         CoursesModule
     ],
+    providers: [LogService],
     // providers: [CourseService],
     bootstrap: [AppComponent]
 })
