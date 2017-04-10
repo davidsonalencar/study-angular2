@@ -7,7 +7,7 @@
     <li>Estrelas: {{book.rating | number:'1.1-1'}}</li>
     <li>Páginas: {{book.totalPages | number}}</li>
     <li>Preço: {{book.price | currency:'BRL':true}}</li>
-    <li>Data Lançamento: {{book.dateThrow | date:'dd/MM/yyyy'}}</li>
+    <li>Data Lançamento: {{book.dateThrow | date:'short'}}</li>
     <li>URL: {{book.url}}</li>
 </ul>
 
