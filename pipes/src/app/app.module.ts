@@ -5,9 +5,11 @@ import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {PipeExampleComponent} from './pipe-example/pipe-example.component';
-import { CamelCasePipe } from './camel-case.pipe';
-import { PipePureComponent } from './pipe-pure/pipe-pure.component';
-import { FilterArrayPipe } from './pipe-pure/filter-array.pipe';
+import {CamelCasePipe} from './camel-case.pipe';
+import {PipePureComponent} from './pipe-pure/pipe-pure.component';
+import {FilterArrayPipe} from './pipe-pure/filter-array.pipe';
+import {PipeImpureComponent} from './pipe-impure/pipe-impure.component';
+import { FilterArrayImpurePipe } from './pipe-impure/filter-array-impure.pipe';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,9 @@ import { FilterArrayPipe } from './pipe-pure/filter-array.pipe';
         PipeExampleComponent,
         CamelCasePipe,
         PipePureComponent,
-        FilterArrayPipe
+        FilterArrayPipe,
+        PipeImpureComponent,
+        FilterArrayImpurePipe
     ],
     imports: [
         BrowserModule,

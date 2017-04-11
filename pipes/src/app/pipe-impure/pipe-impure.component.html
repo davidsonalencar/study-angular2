@@ -1,0 +1,22 @@
+<h5>Pipe Impure</h5>
+
+<input type="text" [(ngModel)]="filter">
+
+<br>
+
+<input type="text" #newBook>
+<button (click)="addBook(newBook.value)">Add New Book</button>
+
+<ul>
+    <li *ngFor="let book of books | filterArrayImpure:filter"> <!-- don't filter a array in your project -->
+        {{book}}
+    </li>
+</ul>
+
+<h5>Maneira correta de usar filtro nos projetos</h5>
+
+<ul>
+    <li *ngFor="let book of getBooks()">
+        {{book}}
+    </li>
+</ul>
