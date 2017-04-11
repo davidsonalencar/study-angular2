@@ -1,0 +1,14 @@
+<h5>Pipe Pure</h5>
+
+<input type="text" [(ngModel)]="filter">
+
+<br>
+
+<input type="text" #newBook>
+<button (click)="addBook(newBook.value)">Add New Book</button>
+
+<ul>
+    <li *ngFor="let book of books | filterArray:filter"> <!-- don't filter a array in your project -->
+        {{book}}
+    </li>
+</ul>
