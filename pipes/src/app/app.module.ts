@@ -10,6 +10,7 @@ import {PipePureComponent} from './pipe-pure/pipe-pure.component';
 import {FilterArrayPipe} from './pipe-pure/filter-array.pipe';
 import {PipeImpureComponent} from './pipe-impure/pipe-impure.component';
 import { FilterArrayImpurePipe } from './pipe-impure/filter-array-impure.pipe';
+import { PipeAsyncComponent } from './pipe-async/pipe-async.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { FilterArrayImpurePipe } from './pipe-impure/filter-array-impure.pipe';
         PipePureComponent,
         FilterArrayPipe,
         PipeImpureComponent,
-        FilterArrayImpurePipe
+        FilterArrayImpurePipe,
+        PipeAsyncComponent
     ],
     imports: [
         BrowserModule,
